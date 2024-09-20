@@ -1,5 +1,6 @@
 ## RAG Process repository
-   
+
+
 ---  
 ### Repository Description  
    
@@ -9,17 +10,22 @@ The RAG Process repository is structured to facilitate the management and proces
    
 #### 1. Data  
 - **Processed**: Contains files, structured data, and tool descriptions that have been refined from raw data.  
-- **Raw**: Houses the original, unprocessed data files.  
-#### 2. Docs  
-- A section dedicated to documentation, providing essential information and guidance on using the repository's resources.  
-#### 3. Legacy  
-- **Page Index**: Includes Jupyter notebooks for reading files, creating search indexes, and pushing data to indexes. These are legacy processes that were previously used.  
-- Contains older versions of processing scripts and notebooks, including those for handling new SKUs.  
-#### 4. Traditional RAG  
+- **Raw**: Houses the original, unprocessed data files.    
+#### 2. Traditional RAG  
 - **Preprocessing and Chunking**: Scripts and libraries for preprocessing and segmenting (chunking) documents.  
+   - All of the approaches use Azure Document Intelligence for OCR.
+   - You can chose among different preprocessing options:  
+     - Markdown processing for rich, hierarchical text handling: ```This approach uses MarkdownHeaderTextSplitter```  
+     - Page indexing for detailed file analysis:  ```This approach keeps the integrity of each page```  
+     - Chunk processing for efficient data handling: ```This approach avoid chunking tables```
 - **Pull Indexer**: Tools for indexing data using Azure SQL Database and CosmosDB. Includes scripts for data loading and index creation.  
-#### 5. Tool Calling  
+#### 3. Tool Calling  
 - Contains Jupyter notebooks for invoking various tools and services, such as AI search, Azure SQL, CosmosDB, and MultiAgent systems.
+#### 4. Legacy  
+- **Page Index**: Includes Jupyter notebooks for reading files, creating search indexes, and pushing data to indexes. These are legacy processes that were previously used.  
+- Contains older versions of processing scripts and notebooks, including those for handling new SKUs.
+#### 5. Docs  
+- A section dedicated to documentation, providing essential information and guidance on using the repository's resources. 
 ---  
 
 #### Repository Map
