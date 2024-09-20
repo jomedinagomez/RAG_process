@@ -29,7 +29,7 @@ The RAG Process repository is structured to facilitate the management and proces
    - HybridSearch: ```This function performs a hybrid search using both text and vector queries to retrieve relevant documents from Azure Search.```
    - GetRAGAnswer: ```This function is designed to generate answers based on retrieved documents and the user's query. It uses a prompt to guide the response generation and ensures that the answers are based on the provided documents.```
 - **SQLDB tool**:  This notebook showcases an approach to generate *SQL* queries based on natural language questions. It uses Azure OpenAI to convert the question into a *SQL* query and then executes the query against *Azure SQL Database*.
-- **Multi tool**:  This approach processes each message in a conversation, determines the appropriate action or tool to invoke (such as querying *CosmosDB, SQLDB, or Azure AI Search*), and updates the conversation history with the responses. It maintains the context throughout the conversation and returns the final conversation history and results.
+- **Multi tool**:  This approach processes each message in a conversation, determines the appropriate action or tool to invoke (such as querying *CosmosDB, SQLDB, or Azure AI Search*), and updates the conversation history with the responses. It maintains the context throughout the conversation and returns the final conversation history and results. If The question is outside of the domain of the tools, then process will default to using the *Bing Web Search API* to answer the question.
 
 These processes use the native API function calling functionality. This can also be achievable by using LangChain, SemanticKernel or other approaches, like using a classifier.
 
