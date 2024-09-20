@@ -15,13 +15,13 @@ The RAG Process repository is structured to facilitate the management and proces
 - **Preprocessing and Chunking**: Scripts and libraries for preprocessing and segmenting (chunking) documents.  
    - All of the approaches use Azure Document Intelligence for OCR.
    - You can chose among different preprocessing options:  
-     - Markdown processing for rich, hierarchical text handling: ```This approach uses MarkdownHeaderTextSplitter```  
-     - Page indexing for detailed file analysis:  ```This approach keeps the integrity of each page```  
-     - Chunk processing for efficient data handling: ```This approach avoid chunking tables```
+     - Markdown processing for rich, hierarchical text handling: ```This approach uses MarkdownHeaderTextSplitter.```  
+     - Page indexing for detailed file analysis:  ```This approach keeps the integrity of each page.```  
+     - Chunk processing for efficient data handling: ```This approach avoid chunking tables.```
 - **Pull Indexer**: Tools for indexing data using Azure SQL Database and CosmosDB. Includes scripts for data loading and index creation.
   - In this folder you will find sample code to create indexers using different strategies:
-    - No skillset: ```This assumes that your data will be already chunked and that each chunk/section contains a vector```
-    - Skillset: ```This approach uses an skillset alongside the integrated vectorizer to chunk your documents and created the vector embeddings```
+    - No skillset: ```This assumes that your data will be already chunked and that each chunk/section contains a vector.```
+    - Skillset: ```This approach uses an skillset alongside the integrated vectorizer to chunk your documents and created the vector embeddings.```
 #### 3. Tool Calling  
 - Contains Jupyter notebooks for invoking various tools and services, such as AI search, Azure SQL, CosmosDB, and MultiAgent systems.
 #### 4. Legacy  
