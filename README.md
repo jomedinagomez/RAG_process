@@ -1,4 +1,27 @@
 ## RAG Process repository
+   
+---  
+### Repository Description  
+   
+The RAG Process repository is a sample repository aimed to be a resource for managing the data lifecycle in RAG applications, providing tools for data preprocessing, indexing, and tool/function calling integration.
+
+The RAG Process repository is structured to facilitate the management and processing of data for retrieval-augmented generation (RAG) tasks. It is organized into several key directories, each serving a distinct purpose:  
+   
+#### 1. Data  
+- **Processed**: Contains files, structured data, and tool descriptions that have been refined from raw data.  
+- **Raw**: Houses the original, unprocessed data files.  
+#### 2. Docs  
+- A section dedicated to documentation, providing essential information and guidance on using the repository's resources.  
+#### 3. Legacy  
+- **Page Index**: Includes Jupyter notebooks for reading files, creating search indexes, and pushing data to indexes. These are legacy processes that were previously used.  
+- Contains older versions of processing scripts and notebooks, including those for handling new SKUs.  
+#### 4. Traditional RAG  
+- **Preprocessing and Chunking**: Scripts and libraries for preprocessing and segmenting (chunking) documents.  
+- **Pull Indexer**: Tools for indexing data using Azure SQL Database and CosmosDB. Includes scripts for data loading and index creation.  
+#### 5. Tool Calling  
+- Contains Jupyter notebooks for invoking various tools and services, such as AI search, Azure SQL, CosmosDB, and MultiAgent systems.
+
+---  
 
 #### Repository Map
 ```
