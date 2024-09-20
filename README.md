@@ -28,11 +28,12 @@ The RAG Process repository is structured to facilitate the management and proces
    - rewrite_query: ```This function rewrites a user's question into multiple search intents to find the most relevant documents in Azure Search.```
    - HybridSearch: ```This function performs a hybrid search using both text and vector queries to retrieve relevant documents from Azure Search.```
    - GetRAGAnswer: ```This function is designed to generate answers based on retrieved documents and the user's query. It uses a prompt to guide the response generation and ensures that the answers are based on the provided documents.```
-
-- Contains Jupyter notebooks for invoking various tools and services, such as AI search, Azure SQL Database, CosmosDB, and MultiAgent systems.
+- **SQLDB tool**:  This notebook showcases an approach to generate Azure SQL Database queries based on natural language questions. It uses Azure OpenAI to convert the question into a Azure SQL Database query and then executes the query against Azure SQL Database.
+- **Multi tool**:  This approach processes each message in a conversation, determines the appropriate action or tool to invoke (such as querying CosmosDB, SQLDB, or performing a document search), and updates the conversation history with the responses. It maintains the context throughout the conversation and returns the final conversation history and results.
+  
 #### 4. Legacy  
 - **Page Index**: Includes Jupyter notebooks for reading files, creating search indexes, and pushing data to indexes. These are legacy processes that were previously used.  
-- Contains older versions of processing scripts and notebooks, including those for handling new SKUs.
+- Contains older versions of processing scripts and notebooks, including those for handling new search SKUs.
 #### 5. Docs  
 - A section dedicated to documentation, providing essential information and guidance on using the repository's resources. 
 ---  
