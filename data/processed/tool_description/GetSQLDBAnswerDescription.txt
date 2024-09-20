@@ -1,27 +1,23 @@
-The provided tables contain information about customers, merchants, products, sales, sales details, and stock levels. Here's a brief description of each table:
+**Table: customers**  
+Fields: cust_id, cust_name, cust_email, cust_phone, cust_address  
+Example: John Doe, john.doe@example.com, 555-123-4567, 123 Main St, City A  
 
-1. **Customers Table**:
-   - **Fields**: `cust_id`, `cust_name`, `cust_email`, `cust_phone`, `cust_address`
-   - **Description**: Contains details about customers, including their ID, name, email, phone number, and address.
+**Table: merchants**  
+Fields: merchant_id, merchant_name, merchant_region, merchant_address  
+Example: ElectroMegaMart, North America, 123 Tech Plaza, New York, NY 10001  
 
-2. **Merchants Table**:
-   - **Fields**: `merchant_id`, `merchant_name`, `merchant_region`, `merchant_address`
-   - **Description**: Stores information about merchants, such as their ID, name, region, and address.
+**Table: products**  
+Fields: prod_id, prod_name, price, category  
+Example: Surface Pro 9, 999.99, Tablet  
 
-3. **Products Table**:
-   - **Fields**: `prod_id`, `prod_name`, `price`, `category`
-   - **Description**: Lists products available for sale, including product ID, name, price, and category.
+**Table: sales**  
+Fields: sale_id, cust_id, merchant_id, date, total_price  
+Example: 1, 8, 9, 2023-01-01, 75  
 
-4. **Sales Table**:
-   - **Fields**: `sale_id`, `cust_id`, `merchant_id`, `date`, `total_price`
-   - **Description**: Records sales transactions, detailing the sale ID, customer ID, merchant ID, date of sale, and total price.
+**Table: sales_detail**  
+Fields: sales_id, prod_id, quantity  
+Example: 1, 1, 97  
 
-5. **Sales Detail Table**:
-   - **Fields**: `sales_id`, `prod_id`, `quantity`
-   - **Description**: Provides detailed information about each sale, including the sales ID, product ID, and quantity sold.
-
-6. **Stock Table**:
-   - **Fields**: `prod_id`, `merchant_id`, `stock`
-   - **Description**: Tracks the stock levels of products at different merchant locations, including product ID, merchant ID, and stock quantity.
-
-These tables can be used to manage and analyze customer interactions, merchant operations, product availability, and sales performance.
+**Table: stock**  
+Fields: prod_id, merchant_id, stock  
+Example: 1, 1, 403  
