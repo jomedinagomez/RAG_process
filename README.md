@@ -13,7 +13,7 @@ The RAG Process repository is structured to facilitate the management and proces
 - **Raw**: Houses the original, unprocessed data files.    
 #### 2. Traditional RAG  
 - **Preprocessing and Chunking**: Scripts and libraries for preprocessing and segmenting (chunking) documents.  
-   - All of the approaches use Azure Document Intelligence for OCR.
+   - All of the approaches use *Azure Document Intelligence* for OCR. In my testing, this services has providedprovided more efficient data extraction, improved accuracy, and better integration compared to other document processing approaches/tools.
    - You can chose among different preprocessing options:  
      - Markdown processing for rich, hierarchical text handling: ```This approach uses MarkdownHeaderTextSplitter.```  
      - Page indexing for detailed file analysis:  ```This approach keeps the integrity of each page.```  
@@ -23,13 +23,13 @@ The RAG Process repository is structured to facilitate the management and proces
     - No skillset: ```This assumes that your data will be already chunked and that each chunk/section contains a vector.```
     - Skillset: ```This approach uses an skillset alongside the integrated vectorizer to chunk your documents and created the vector embeddings.```
 #### 3. Tool Calling  
-- **CosmosDB tool**:  This notebook showcases an approach to generate CosmosDB NoSQL queries based on natural language questions. It uses Azure OpenAI to convert the question into a NoSQL query and then executes the query against CosmosDB.
+- **CosmosDB tool**:  This notebook showcases an approach to generate *NoSQL* queries based on natural language questions. It uses Azure OpenAI to convert the question into a *NoSQL* query and then executes the query against CosmosDB.
 - **RAG tool**: this tool executes on a few functions:
    - rewrite_query: ```This function rewrites a user's question into multiple search intents to find the most relevant documents in Azure Search.```
    - HybridSearch: ```This function performs a hybrid search using both text and vector queries to retrieve relevant documents from Azure Search.```
    - GetRAGAnswer: ```This function is designed to generate answers based on retrieved documents and the user's query. It uses a prompt to guide the response generation and ensures that the answers are based on the provided documents.```
-- **SQLDB tool**:  This notebook showcases an approach to generate Azure SQL Database queries based on natural language questions. It uses Azure OpenAI to convert the question into a Azure SQL Database query and then executes the query against Azure SQL Database.
-- **Multi tool**:  This approach processes each message in a conversation, determines the appropriate action or tool to invoke (such as querying CosmosDB, SQLDB, or performing a document search), and updates the conversation history with the responses. It maintains the context throughout the conversation and returns the final conversation history and results.
+- **SQLDB tool**:  This notebook showcases an approach to generate *SQL* queries based on natural language questions. It uses Azure OpenAI to convert the question into a *SQL* query and then executes the query against *Azure SQL Database*.
+- **Multi tool**:  This approach processes each message in a conversation, determines the appropriate action or tool to invoke (such as querying *CosmosDB, SQLDB, or Azure AI Search*), and updates the conversation history with the responses. It maintains the context throughout the conversation and returns the final conversation history and results.
 
 These processes use the native API function calling functionality. This can also be achievable by using LangChain, SemanticKernel or other approaches, like using a classifier.
 
