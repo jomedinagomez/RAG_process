@@ -1,23 +1,97 @@
-**Table: customers**  
-Fields: cust_id, cust_name, cust_email, cust_phone, cust_address  
-Example: John Doe, john.doe@example.com, 555-123-4567, 123 Main St, City A  
+Here is a structured description of the tables and their sample values, suitable for selecting an OpenAI tool for interaction:
 
-**Table: merchants**  
-Fields: merchant_id, merchant_name, merchant_region, merchant_address  
-Example: ElectroMegaMart, North America, 123 Tech Plaza, New York, NY 10001  
+---
 
-**Table: products**  
-Fields: prod_id, prod_name, price, category  
-Example: Surface Pro 9, 999.99, Tablet  
+**Table Descriptions for Tool Selection**
 
-**Table: sales**  
-Fields: sale_id, cust_id, merchant_id, date, total_price  
-Example: 1, 8, 9, 2023-01-01, 75  
+1. Table Name: customers  
+   - Description: Contains customer information including unique ID, name, email, phone number, and address.
+   - Sample Fields:  
+     - cust_id: 1  
+     - cust_name: "John Doe"  
+     - cust_email: "john.doe@example.com"  
+     - cust_phone: "555-123-4567"  
+     - cust_address: "123 Main St, City A"
 
-**Table: sales_detail**  
-Fields: sales_id, prod_id, quantity  
-Example: 1, 1, 97  
+2. Table Name: greenTaxiData  
+   - Description: Stores detailed records of green taxi trips, including vendor, pickup/dropoff times and locations, trip distance, fare breakdown, payment type, and transaction ID.
+   - Sample Fields:  
+     - vendorID: 2  
+     - lpepPickupDatetime: "1/3/2016 21:02"  
+     - lpepDropoffDatetime: "1/3/2016 21:05"  
+     - passengerCount: 1  
+     - tripDistance: 0.83  
+     - pickupLongitude: -73.98726654  
+     - pickupLatitude: 40.69383621  
+     - fareAmount: 4.5  
+     - totalAmount: 5.8  
+     - transactionID: "JLYOPGED"
 
-**Table: stock**  
-Fields: prod_id, merchant_id, stock  
-Example: 1, 1, 403  
+3. Table Name: merchants  
+   - Description: Contains merchant details such as unique ID, name, region, and address.
+   - Sample Fields:  
+     - merchant_id: 1  
+     - merchant_name: "ElectroMegaMart"  
+     - merchant_region: "North America"  
+     - merchant_address: "123 Tech Plaza, New York, NY 10001"
+
+4. Table Name: products  
+   - Description: Lists products with unique ID, name, price, and category.
+   - Sample Fields:  
+     - prod_id: 1  
+     - prod_name: "Surface Pro 9"  
+     - price: 999.99  
+     - category: "Tablet"
+
+5. Table Name: sales  
+   - Description: Records sales transactions, linking customers and merchants, with date and total price.
+   - Sample Fields:  
+     - sale_id: 1  
+     - cust_id: 8  
+     - merchant_id: 9  
+     - date: "2023-01-01"  
+     - total_price: 75
+
+6. Table Name: sales_detail  
+   - Description: Details the products and quantities involved in each sale.
+   - Sample Fields:  
+     - sales_id: 1  
+     - prod_id: 1  
+     - quantity: 97
+
+7. Table Name: stock  
+   - Description: Tracks the stock levels of each product at each merchant location.
+   - Sample Fields:  
+     - prod_id: 1  
+     - merchant_id: 1  
+     - stock: 403
+
+8. Table Name: yellowTaxiData  
+   - Description: Contains records of yellow taxi trips, including vendor, pickup/dropoff times and locations, trip distance, fare breakdown, payment type, and transaction ID.
+   - Sample Fields:  
+     - vendorID: 2  
+     - tpepPickupDateTime: "1/6/2016 12:09"  
+     - tpepDropoffDateTime: "1/6/2016 12:22"  
+     - passengerCount: 1  
+     - tripDistance: 2.09  
+     - startLon: -73.98207092  
+     - startLat: 40.74605942  
+     - fareAmount: 10.5  
+     - totalAmount: 13.56  
+     - transactionID: "IWZHYXRG"
+
+---
+
+**Example for Each Field:**
+
+- Table Name: products
+- Description: Lists products with unique ID, name, price, and category.
+- Sample Fields:
+  - prod_id: 1
+  - prod_name: "Surface Pro 9"
+  - price: 999.99
+  - category: "Tablet"
+
+---
+
+This structured description can be used by an OpenAI tool to enable users to query, analyze, or interact with the data in these tables.
